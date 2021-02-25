@@ -4,15 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "tslib", "./base", "./data"], factory);
+        define(["require", "exports", "../base"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    exports.Hexagram = exports.Trigram = exports.Gram = void 0;
-    const tslib_1 = require("tslib");
-    const base_1 = require("./base");
-    const Data = tslib_1.__importStar(require("./data"));
+    const base_1 = require("../base");
     class Gram {
         constructor(opt) {
             if (opt.yao.length !== opt.length) {
@@ -52,29 +49,6 @@
             return gram;
         }
     }
-    exports.Gram = Gram;
-    class Trigram extends Gram {
-        constructor(yao) {
-            super({
-                yao,
-                length: 3,
-                data: Data.Trigrams
-            });
-        }
-        print() {
-            console.log(this.data.character);
-        }
-    }
-    exports.Trigram = Trigram;
-    class Hexagram extends Gram {
-        constructor(yao) {
-            super({
-                yao,
-                length: 6,
-                data: Data.Hexagrams
-            });
-        }
-    }
-    exports.Hexagram = Hexagram;
+    exports.default = Gram;
 });
 //# sourceMappingURL=gram.js.map
