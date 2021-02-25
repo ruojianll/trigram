@@ -20,6 +20,9 @@
                 data: Data.Trigrams
             });
         }
+        duplicate() {
+            return new Trigram(this.yao);
+        }
         print() {
             console.log(this.data.character);
         }

@@ -11,6 +11,9 @@ export default class Hexagram extends Gram<6, Data.HexagramData>{
             data: Data.Hexagrams
         })
     }
+    duplicate() {
+        return new Hexagram(this.yao)
+    }
     print() {
 
         console.log(this.data.character)

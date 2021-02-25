@@ -48,6 +48,9 @@
             }
             return gram;
         }
+        toString() {
+            return this.data.character;
+        }
     }
     exports.default = Gram;
 });

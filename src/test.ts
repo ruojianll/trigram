@@ -1,7 +1,8 @@
-import  Hexagram  from './gram/hexagram'
-import { YAO } from './base'
-let t = new Hexagram([YAO.YANG,YAO.YANG,YAO.YANG,YAO.YIN,YAO.YIN,YAO.YIN])
-t.flip(1)
-t.flip()
-t.reverse()
-t.print()
+
+
+import * as P8 from './prefab/primordial8'
+import * as M8 from './prefab/manifested8'
+import * as Square64 from './prefab/square64'
+import * as Base from './base'
+
+console.log(Base.stringifyMatrix(Square64.Matrix))

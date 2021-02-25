@@ -10,6 +10,9 @@ export default class Trigram extends Gram<3, Data.TrigramData>{
         })
     }
 
+    duplicate() {
+        return new Trigram(this.yao)
+    }
     print() {
 
         console.log(this.data.character)

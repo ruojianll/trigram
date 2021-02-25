@@ -20,6 +20,9 @@
                 data: Data.Hexagrams
             });
         }
+        duplicate() {
+            return new Hexagram(this.yao);
+        }
         print() {
             console.log(this.data.character);
         }

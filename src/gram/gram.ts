@@ -1,8 +1,8 @@
 import { YAO } from '../base'
 import * as Data from '../data'
-export default class Gram<L extends number, D extends Data.GramData>{
-    protected yao: YAO[]
-    protected readonly Length: number
+export default abstract class Gram<L extends number, D extends Data.GramData>{
+    yao: YAO[]
+    protected readonly Length: L
     protected readonly Data: D[]
     constructor(opt: {
         yao: YAO[],
@@ -38,12 +38,17 @@ export default class Gram<L extends number, D extends Data.GramData>{
     print() {
         console.log(this.yao.join(','))
     }
+    abstract duplicate(): Gram<L, D>;
+
     get data() {
         let gram = this.Data.find(t => t.yao.join(',') === this.yao.join(','))
         if (!gram) {
             throw new Error('Not find data.')
         }
         return gram
+    }
+    toString(){
+        return this.data.character
     }
 }
 
