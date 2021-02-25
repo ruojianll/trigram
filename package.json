@@ -1,0 +1,35 @@
+{
+  "name": "trigram",
+  "version": "1.0.0",
+  "description": "Trigrams builder and manipulator in the book of changes.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruojianll/trigram.git"
+  },
+  "keywords": [
+    "i",
+    "ching",
+    "the",
+    "book",
+    "of",
+    "changes",
+    "trigrams"
+  ],
+  "author": "ruojianll@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruojianll/trigram/issues"
+  },
+  "homepage": "https://github.com/ruojianll/trigram#readme",
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.2",
+    "gulp": "^4.0.2"
+  }
+}
